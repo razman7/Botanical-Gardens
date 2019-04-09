@@ -15,34 +15,382 @@ a{
   text-decoration: none;
 }
 
-#wrapper{
+p{
+  margin: 0;
+}
+
+/*///////////////////////////////////////////////////////////// SPLASH SCREEN */
+#splashwrapper{
   display: grid;
   height: 100vh;
-  background-color: pink;
+  background-image: url(images/land.jpg);
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 300px 1fr;
 }
 
-.title{
+.splashtitle{
   grid-row-start: 1;
   align-self: center;
   justify-self: center;
-  font-size: 12.5em;
+  font-size: 10em;
   color: #8bad3f;
 }
 
-.button{
+.splashbutton{
   grid-row-start: 3;
   align-self: center;
   justify-self: center;
-  font-size: 3.5em;
   background-color: white;
   text-align: center;
-  justify-items: center;
   border-radius: 25px;
   border: 2px solid #fabb00;
+  width: 40%;
+  height: 40%;
+  grid-column-start: 1;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+
+  box-shadow: 4px 4px 4px #777;
 }
-.btext{
-  margin: 60px 80px 60px 80px;
+.splashbtext{
   font-weight: 500;
+  font-size: 3.5em;
+  grid-row-start: 1;
+  align-self: center;
+  justify-self: center;
+  grid-column-start: 1;
 }
+/*///////////////////////////////////////////////////////// SPLASH SCREEN END */
+
+/*///////////////////////////////////////////////////////////////////MAIN PAGE*/
+#mainwrapper{
+  display: grid;
+  height: 100vh;
+  background-image: url(images/home.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 85px;
+}
+
+.topdiv{
+  grid-row-start: 1;
+  align-self: center;
+  justify-self: center;
+  grid-column: 1 / span 2;
+}
+.maintitle{
+  font-size: 8em;
+  color: #8bad3f;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.bodtext{
+  text-align: center;
+  font-size: 2em;
+}
+
+#mb1{
+  grid-row-start: 2;
+  grid-column: 1 / span 2;
+}
+
+#mb2{
+  grid-row-start: 3;
+}
+
+#mb3{
+  grid-row-start: 3;
+  grid-column-start: 2;
+}
+
+.mainbutton{
+  align-self: center;
+  justify-self: center;
+  background-color: white;
+  text-align: center;
+  border-radius: 25px;
+  border: 2px solid #fabb00;
+  width: 90%;
+  height: 80%;
+  grid-column-start: 1;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px 1.2fr .8fr 50px;
+
+  box-shadow: 2px 2px 4px #777;
+}
+.mainbtextalt{
+  font-weight: 400;
+  font-size: 3em;
+  grid-row-start: 3;
+  align-self: center;
+  justify-self: center;
+  grid-column-start: 1;
+}
+.mainbutton2{
+  align-self: center;
+  justify-self: center;
+  background-color: white;
+  text-align: center;
+  border-radius: 25px;
+  border: 2px solid #fabb00;
+  width: 80%;
+  height: 80%;
+  grid-column-start: 1;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px 1.2fr .8fr 50px;
+
+  box-shadow: 2px 2px 4px #777;
+}
+.mainbtext{
+  font-weight: 400;
+  font-size: 3em;
+  grid-row-start: 3;
+  align-self: center;
+  justify-self: center;
+  grid-column-start: 1;
+}
+.mainbimg{
+  grid-row-start: 2;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+#mbi1{
+  background-image: url(icons/destination.svg);
+}
+#mbi2{
+  background-image: url(icons/map.svg);
+}
+#mbi3{
+  background-image: url(icons/plant.svg);
+}
+/*///////////////////////////////////////////////////////////////////MAIN PAGE*/
+
+/*//////////////////////////////////////////////////////////////////NAVIGATION*/
+nav{
+  background-color: white;
+  grid-row-start: 4;
+  grid-column: 1 / span 2;
+  border-top: 2px solid #fabb00;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 15px 1fr 15px;
+}
+.menu{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  grid-row-start: 2;
+}
+#menu1{
+  background-image:url(icons/menu.svg);
+  grid-column-start: 1;
+}
+#menu2{
+  background-image:url(icons/map.svg);
+  grid-column-start: 2;
+}
+#menu3{
+  background-image:url(icons/camera.svg);
+  grid-column-start: 3;
+}
+#menu4{
+  background-image:url(icons/destination.svg);
+  grid-column-start: 4;
+}
+#menu5{
+  background-image:url(icons/plant.svg);
+  grid-column-start: 5;
+}
+/*//////////////////////////////////////////////////////////////////NAVIGATION*/
+
+/*/////////////////////////////////////////////////////////////////PLANT GUIDE*/
+#guidewrapper{
+  display: grid;
+  height: 100vh;
+  background-image: url(images/guide.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 85px;
+}
+
+#gbi1{
+  background-image: url(icons/med.svg);
+}
+#gbi2{
+  background-image: url(icons/desert.svg);
+}
+#gbi3{
+  background-image: url(icons/mountain.svg);
+}
+#gbi4{
+  background-image: url(icons/tropical.svg);
+}
+
+#gb1{
+  grid-row-start: 2;
+  grid-column-start: 1;
+}
+#gb2{
+  grid-row-start: 2;
+  grid-column-start: 2;
+}
+#gb3{
+  grid-row-start: 3;
+  grid-column-start: 1;
+}
+#gb4{
+  grid-row-start: 3;
+  grid-column-start: 2;
+}
+/*/////////////////////////////////////////////////////////////////PLANT GUIDE*/
+
+/*///////////////////////////////////////////////////////////////////ADVENTURE*/
+#adventurewrapper{
+  display: grid;
+  height: 100vh;
+  background-image: url(images/scavange.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 85px;
+}
+
+#abi1{
+  background-image: url(icons/med.svg);
+}
+#abi2{
+  background-image: url(icons/desert.svg);
+}
+#abi3{
+  background-image: url(icons/mountain.svg);
+}
+#abi4{
+  background-image: url(icons/tropical.svg);
+}
+
+#ab1{
+  grid-row-start: 2;
+  grid-column-start: 1;
+}
+#ab2{
+  grid-row-start: 2;
+  grid-column-start: 2;
+}
+#ab3{
+  grid-row-start: 3;
+  grid-column-start: 1;
+}
+#ab4{
+  grid-row-start: 3;
+  grid-column-start: 2;
+}
+/*///////////////////////////////////////////////////////////////////ADVENTURE*/
+
+/*///////////////////////////////////////////////////////////////////////INTRO*/
+#introwrapper{
+  display: grid;
+  height: 100vh;
+  background-image: url(images/adventure.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr .5fr .5fr 85px;
+}
+
+#introdiv{
+  background-image: url(images/sprout2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  grid-column: 1 / span 2;
+  height: 100%;
+}
+#introtitle{
+  align-self: center;
+  justify-self: center;
+  margin-top: 270px;
+}
+
+#ib1{
+  grid-row: 2 / span 4;
+  grid-column-start: 1;
+}
+#ib2{
+  grid-row: 2 / span 4;
+  grid-column-start: 2;
+}
+.introbutton{
+  align-self: center;
+  justify-self: center;
+  background-color: white;
+  text-align: center;
+  border-radius: 25px;
+  border: 2px solid #fabb00;
+  width: 80%;
+  height: 40%;
+  grid-column-start: 1;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
+  box-shadow: 2px 2px 4px #777;
+}
+.introtext{
+  text-align: center;
+  font-size: 2em;
+  grid-row-start: 2;
+  grid-column: 1 / span 2;
+  justify-self: center;
+}
+/*///////////////////////////////////////////////////////////////////////INTRO*/
+
+/*///////////////////////////////////////////////////////////////////////START*/
+#startwrapper{
+  display: grid;
+  height: 100vh;
+  background-image: url(images/adventure.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 85px;
+}
+
+.startnav{
+  grid-row: 6;
+}
+
+#sb1{
+  grid-column: 1;
+  grid-row: 4 / span 5;
+}
+#sb2{
+  grid-column: 2;
+  grid-row: 4 / span 5;
+}
+
+.starttext{
+  grid-row: 2;
+  grid-column: 1 / span 2;
+  text-align: center;
+  font-size: 2em;
+  justify-self: center;
+}
+.starttext2{
+  grid-row: 4;
+  grid-column: 1 / span 2;
+  text-align: center;
+  font-size: 2em;
+  justify-self: center;
+}
+/*///////////////////////////////////////////////////////////////////////START*/
