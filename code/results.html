@@ -7,22 +7,29 @@
     <title>Botanic Garden</title>
   </head>
   <body>
-    <div id="introwrapper">
-      <div class="topdiv" id="introdiv">
-        <h1 class="maintitle" id="introtitle">Garden Adventures</h1>
+    <div id="startwrapper">
+      <div class="starttopdiv">
+        <h1 class="maintitle">Tropical House</h1>
       </div>
 
-      <p class="introtext">This companion app will guide you through the gardens<br> and help you discover the secrets within.</p>
+      <p class="starttext">You've found 5 out of 5 objectives. That's 100% completion.<br> Share your victory with #botanicalscavenger</p>
+      <p class="starttext2">With each tour the objectives change, so make sure<br> to come back periodically and complete them all.</p>
 
-      <div class="introbutton" id="ib1">
-        <p class="mainbtext">How it works</p>
+      <div class="startbutton" id="rb1">
+        <div class="mainbimg" id="rbi2"></div>
       </div>
 
-      <a href="start.html" class="introbutton" id="ib2">
-        <p class="mainbtext">Enter</p>
+      <a href="" class="startbutton" id="rb3">
+        <p class="mainbtext">Get Results</p>
+      </a>
+      <a href="solution.html" class="startbutton" id="rb4">
+        <p class="mainbtext">Restart Tour</p>
+      </a>
+      <a href="start.html" class="startbutton" id="rb5">
+        <p class="mainbtext">Next Tour</p>
       </a>
 
-      <nav id="nav">
+      <nav id="nav" class="startnav">
         <a href="main.html" id="menu1" class="menu"></a>
         <a href="map.html" id="menu2" class="menu"></a>
         <a href="camera.html" id="menu3" class="menu"></a>
@@ -32,7 +39,7 @@
     </div>
 
     <div id="myModal" class="modal">
-      <div class="modal-content-intro">
+      <div class="modal-content-results">
         <span class="close">&times;</span>
       </div>
     </div>
@@ -41,7 +48,7 @@
       //courtesy of w3schools
       var modal = document.getElementById('myModal');
 
-      var btn = document.getElementById("ib1");
+      var btn = document.getElementById("rb1");
 
       var span = document.getElementsByClassName("close")[0];
 

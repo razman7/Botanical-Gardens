@@ -24,6 +24,9 @@ p{
   display: grid;
   height: 100vh;
   background-image: url(images/land.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 300px 1fr;
 }
@@ -324,6 +327,7 @@ nav{
 #ib1{
   grid-row: 2 / span 4;
   grid-column-start: 1;
+  cursor: pointer;
 }
 #ib2{
   grid-row: 2 / span 4;
@@ -362,35 +366,387 @@ nav{
   background-image: url(images/adventure.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1px 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 85px;
+}
+
+.starttopdiv{
+  grid-row-start: 1;
+  align-self: center;
+  justify-self: center;
+  grid-column: 1 / span 3;
 }
 
 .startnav{
   grid-row: 6;
+  grid-column: 1 / span 3;
 }
 
 #sb1{
   grid-column: 1;
   grid-row: 4 / span 5;
+  height: 100px;
 }
 #sb2{
-  grid-column: 2;
+  grid-column: 3;
   grid-row: 4 / span 5;
+  height: 100px;
 }
 
 .starttext{
   grid-row: 2;
-  grid-column: 1 / span 2;
+  grid-column: 1 / span 3;
   text-align: center;
   font-size: 2em;
-  justify-self: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .starttext2{
   grid-row: 4;
-  grid-column: 1 / span 2;
+  grid-column: 1 / span 3;
   text-align: center;
   font-size: 2em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.startbutton{
+  align-self: center;
   justify-self: center;
+  background-color: white;
+  text-align: center;
+  border-radius: 25px;
+  border: 2px solid #fabb00;
+  width: 170px;
+  height: 120px;
+  grid-column-start: 1;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
+  box-shadow: 2px 2px 4px #777;
+
+  font-size: .7em;
+}
+#sb3{
+  grid-column: 1;
+  grid-row: 2 / span 3;
+  background-color: #EE7F00;
+  transition:.5s ease-out;
+  cursor: pointer;
+}
+#sb3:focus{
+	border: 10px solid white;
+}
+#sb4{
+  grid-column: 1 / span 3;
+  grid-row: 2 / span 3;
+  background-color: #00ABA4;
+  transition:.5s ease-out;
+  cursor: pointer;
+}
+#sb4:focus{
+	border: 10px solid white;
+}
+#sb5{
+  grid-column: 3;
+  grid-row: 2 / span 3;
+  background-color: #FABB00;
+  transition:.5s ease-out;
+  cursor: pointer;
+}
+#sb5:focus{
+  border: 10px solid white;
 }
 /*///////////////////////////////////////////////////////////////////////START*/
+
+/*////////////////////////////////////////////////////////////////////SOLUTION*/
+#solutionwrapper{
+  display: grid;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 85px;
+}
+#bg{
+  overflow: auto;
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 5;
+}
+#grid2{
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 5;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 100px 1fr 1fr 1fr 1fr 1fr 130px;
+  height: 4090px;
+}
+.meme3{
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  z-index: -1;
+  width: 100%;
+}
+
+.paragraphs{
+  text-align: left;
+  font-size: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+}
+#firstpara{
+  grid-column: 1;
+  grid-row: 2;
+  text-align: center;
+  font-size: 2em;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+#secpara{
+  grid-column: 2;
+  grid-row: 2;
+  text-align: center;
+  font-size: 2em;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+#thirdpara{
+  grid-column: 2;
+  grid-row: 3;
+}
+#fourthpara{
+  grid-column: 1;
+  grid-row: 4;
+}
+#fifthpara{
+  grid-column: 2;
+  grid-row: 5;
+}
+#sixthpara{
+  grid-column: 1;
+  grid-row: 6;
+}
+#sevpara{
+  grid-column: 2;
+  grid-row: 7;
+}
+
+.solbutton{
+  align-self: center;
+  justify-self: center;
+  background-color: white;
+  text-align: center;
+  border-radius: 25px;
+  border: 5px solid #fabb00;
+  width: 350px;
+  height: 350px;
+  grid-column-start: 1;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
+  box-shadow: 2px 2px 4px #777;
+}
+.solbutton2{
+  align-self: center;
+  justify-self: center;
+  background-color: #8bad3f;
+  background-image: url(activeicons/camera_active.svg);
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  border-radius: 25px;
+  border: 5px solid #fabb00;
+  width: 150px;
+  height: 150px;
+  grid-column-start: 1;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
+  box-shadow: 2px 2px 4px #777;
+}
+#firstsdiv{
+  grid-column: 1;
+  grid-row: 3;
+}
+#firstsdiv2{
+  grid-column: 1;
+  grid-row: 3;
+}
+#secsdiv{
+  grid-column: 2;
+  grid-row: 4;
+}
+#secsdiv2{
+  grid-column: 2;
+  grid-row: 4;
+}
+#thirdsdiv{
+  grid-column: 1;
+  grid-row: 5;
+}
+#thirdsdiv2{
+  grid-column: 1;
+  grid-row: 5;
+}
+#fourthsdiv{
+  grid-column: 2;
+  grid-row: 6;
+}
+#fourthsdiv2{
+  grid-column: 2;
+  grid-row: 6;
+}
+#fifthsdiv{
+  grid-column: 1;
+  grid-row: 7;
+}
+#fifthsdiv2{
+  grid-column: 1;
+  grid-row: 7;
+}
+
+#sbfinal{
+  grid-row: 8;
+  grid-column: 1 / span 2;
+  width: 30%;
+  height: 80%;
+}
+/*////////////////////////////////////////////////////////////////////SOLUTION*/
+
+/*/////////////////////////////////////////////////////////////////////RESULTS*/
+#rb1{
+  grid-column: 1 / span 3;
+  grid-row: 2 / span 3;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+}
+#rbi2{
+  grid-row: 2 / span 3;
+  background-image: url(icons/connections.svg);
+}
+
+#rb3{
+  grid-column: 1;
+  grid-row: 4 / span 5;
+  cursor: pointer;
+}
+#rb4{
+  grid-column: 1 / span 3;
+  grid-row: 4 / span 5;
+  cursor: pointer;
+}
+#rb5{
+  grid-column: 3;
+  grid-row: 4 / span 5;
+  cursor: pointer;
+}
+/*/////////////////////////////////////////////////////////////////////RESULTS*/
+
+/*//////////////////////////////////////////////////////////////CAMERA AND MAP*/
+#camerawrapper{
+  background-image: url(images/camera2.png);
+  display: grid;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 85px;
+}
+#mapwrapper{
+  background-image: url(images/map2.png);
+  display: grid;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 85px;
+}
+
+/*/////////////////////////////////////////////////////////////////ACTIVE MENU*/
+#menu1a{
+  background-image: url(activeicons/menu_active.svg);
+  grid-column-start: 1;
+}
+#menu2a{
+  background-image: url(activeicons/map_active.svg);
+  grid-column-start: 2;
+}
+#menu3a{
+  background-image: url(activeicons/camera_active.svg);
+  grid-column-start: 3;
+}
+#menu4a{
+  background-image: url(activeicons/game_active.svg);
+  grid-column-start: 4;
+}
+#menu5a{
+  background-image: url(activeicons/plant_active.svg);
+  grid-column-start: 5;
+}
+
+
+/*/////////////////////////////////////////////////////////////////MODAL POPUP*/
+.modal{
+ display: none;
+ position: fixed;
+ z-index: 1;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+}
+
+.modal-content-intro{
+ width: 100%;
+ height: 100%;
+ background-image: url(images/help.png);
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: contain;
+}
+
+.modal-content-results{
+ width: 100%;
+ height: 100%;
+ background-image: url(images/social.png);
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: contain;
+}
+
+.close{
+ color: #aaa;
+ font-size: 48px;
+ font-weight: bold;
+ position: relative;
+ float: right;
+ top: 100px;
+ right: 50px;
+}
+
+.close:hover,
+.close:focus{
+ color: black;
+ text-decoration: none;
+ cursor: pointer;
+}
